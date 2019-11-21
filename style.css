@@ -3,9 +3,11 @@ body {
     position: relative;
 }
 
+.container {
+    display: inline-flex;
+}
 .dice {
     position: relative;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 50px;
@@ -16,6 +18,14 @@ body {
     color: white;
     background-color: blue;
     cursor: pointer;
+}
+
+.btn {
+    position: relative;
+    font-size: 20px;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
 }
 
 .checked {
