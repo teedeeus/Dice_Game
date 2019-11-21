@@ -1,3 +1,4 @@
+let dieValue = []
 
 function randomDie() {
     return Math.floor( Math.random() * 6 ) + 1
@@ -11,8 +12,11 @@ function displayDie(num, value) {
 function updateDie() {
     for(let i=1; i<6; i++) {
         if(document.getElementById(i).classList.contains("checked")) continue
-        displayDie(i, randomDie())
+        r = randomDie()
+        displayDie(i, r)
+        dieValue[i] = r
     }
+    console.log(dieValue)
 }
 
 function toggleDie(val) {
