@@ -10,6 +10,7 @@ function displayDie(num, value) {
 
 function updateDie() {
     for(let i=1; i<6; i++) {
+        if(document.getElementById(i).classList.contains("checked")) continue
         displayDie(i, randomDie())
     }
 }
@@ -23,7 +24,7 @@ window.onload = function() {
     for(let i=1; i<6; i++) {
         let h= document.getElementById(i).addEventListener("click", toggleDie, false)
     }
+    this.document.getElementById("roll").addEventListener("click", updateDie, false)
 }
-
 
 updateDie()
