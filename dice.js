@@ -1,4 +1,5 @@
 let dieValue = []
+let score = 0
 
 function randomDie() {
     return Math.floor( Math.random() * 6 ) + 1
@@ -12,11 +13,47 @@ function displayDie(num, value) {
 function updateDie() {
     for(let i=1; i<6; i++) {
         if(document.getElementById(i).classList.contains("checked")) continue
-        r = randomDie()
+        let r = randomDie()
         displayDie(i, r)
         dieValue[i] = r
     }
     console.log(dieValue)
+}
+function updateScore() {
+    for(let i=1; i<6; i++) {
+        let h=document.getElementById(i)
+        console.log(h)
+        if (h.classList.contains("checked")) {h.classList.toggle("checked")}
+        h.removeEventListener("click", toggleDie, false)
+        h.removeAttribute("id")
+    }
+    const rmRoll = document.getElementById("roll")
+    rmRoll.parentNode.removeChild(rmRoll)
+    const rmScore = document.getElementById("score")
+    rmScore.parentNode.removeChild(rmScore)
+    
+    createDice()
+}
+
+function createDice() {
+    const nextLine = Object.values(document.getElementsByClassName("next")).pop()
+    console.log(nextLine)
+    nextLine.innerHTML = `
+    <div class="container">
+        <div class="dice" id="1"></div>
+        <div class="dice" id="2"></div>
+        <div class="dice" id="3"></div>
+        <div class="dice" id="4"></div>
+        <div class="dice" id="5"></div>
+    
+        <button class="btn" id="roll">Roll</button>
+        <button class="btn" id="score">Score</button>
+    </div>
+    <div class="next"></div>
+    `
+    console.log(nextLine)
+    createButtons()
+    updateDie()
 }
 
 function toggleDie(val) {
@@ -24,11 +61,12 @@ function toggleDie(val) {
     t.classList.toggle("checked")
 }
 
-window.onload = function() {
+function createButtons() {
     for(let i=1; i<6; i++) {
         let h= document.getElementById(i).addEventListener("click", toggleDie, false)
     }
     this.document.getElementById("roll").addEventListener("click", updateDie, false)
+    this.document.getElementById("score").addEventListener("click", updateScore, false)
 }
+window.onload = createDice()
 
-updateDie()
