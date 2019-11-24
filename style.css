@@ -38,3 +38,13 @@ body {
     background-color: orange;
     color: blue;
 }
+
+.turn {
+    display: inline-flex;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px; 
+}

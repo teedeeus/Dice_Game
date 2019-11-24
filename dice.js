@@ -1,5 +1,8 @@
 let dieValue = []
 let score = 0
+let lineScore = 0
+let turn = 0
+
 
 function randomDie() {
     return Math.floor( Math.random() * 6 ) + 1
@@ -27,6 +30,9 @@ function updateScore() {
         h.removeEventListener("click", toggleDie, false)
         h.removeAttribute("id")
     }
+
+    checkLineScore()
+    dieValue.length = 0
     const rmRoll = document.getElementById("roll")
     rmRoll.parentNode.removeChild(rmRoll)
     const rmScore = document.getElementById("score")
@@ -37,21 +43,21 @@ function updateScore() {
 
 function createDice() {
     const nextLine = Object.values(document.getElementsByClassName("next")).pop()
+    turn++
     console.log(nextLine)
     nextLine.innerHTML = `
+    <div class="next"></div>
     <div class="container">
+        <div class="turn">${turn}</div>
         <div class="dice" id="1"></div>
         <div class="dice" id="2"></div>
         <div class="dice" id="3"></div>
         <div class="dice" id="4"></div>
         <div class="dice" id="5"></div>
-    
         <button class="btn" id="roll">Roll</button>
         <button class="btn" id="score">Score</button>
     </div>
-    <div class="next"></div>
     `
-    console.log(nextLine)
     createButtons()
     updateDie()
 }
@@ -68,5 +74,12 @@ function createButtons() {
     this.document.getElementById("roll").addEventListener("click", updateDie, false)
     this.document.getElementById("score").addEventListener("click", updateScore, false)
 }
+
+function checkLineScore() {
+    dieValue.sort()
+    console.log(`Sorted: ${dieValue}`)
+    
+}
+
 window.onload = createDice()
 
