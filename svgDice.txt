@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg width="50" height="50">
+  <rect x="0" y="0" rx="5" ry="5" width="50" height="50" stroke="black" stroke-width="1" fill="white" />
+  <circle cx="10" cy="10" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="10" cy="40" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="40" cy="10" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="40" cy="40" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="25" cy="25" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="10" cy="25" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="40" cy="25" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+Sorry, your browser does not support inline SVG.
+</svg>
+<svg width="50" height="50">
+  <rect x="0" y="0" rx="5" ry="5" width="50" height="50" stroke="black" stroke-width="1" fill="white" />
+  <circle cx="10" cy="10" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="10" cy="40" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="40" cy="10" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="40" cy="40" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="25" cy="25" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="10" cy="25" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+  <circle cx="40" cy="25" r="4"
+  stroke="black" stroke-width="1" fill="black" />
+Sorry, your browser does not support inline SVG.
+</svg>
+</body>
+</html>

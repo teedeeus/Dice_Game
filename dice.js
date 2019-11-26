@@ -46,7 +46,6 @@ function createDice() {
     turn++
     console.log(nextLine)
     nextLine.innerHTML = `
-    <div class="next"></div>
     <div class="container">
         <div class="turn">${turn}</div>
         <div class="dice" id="1"></div>
@@ -57,6 +56,7 @@ function createDice() {
         <button class="btn" id="roll">Roll</button>
         <button class="btn" id="score">Score</button>
     </div>
+    <div class="next"></div>
     `
     createButtons()
     updateDie()
@@ -82,4 +82,3 @@ function checkLineScore() {
 }
 
 window.onload = createDice()
-
