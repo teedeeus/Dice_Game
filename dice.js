@@ -3,7 +3,6 @@ let score = 0
 let lineScore = 0
 let turn = 0
 
-
 function randomDie() {
     return Math.floor( Math.random() * 6 ) + 1
 }
