@@ -8,6 +8,7 @@ body {
     border-top: 1px solid blue;
     width: 100%
 }
+
 .dice {
     display: inline-flex;
     position: relative;
